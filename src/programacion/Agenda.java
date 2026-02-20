@@ -9,6 +9,12 @@ public class Agenda {
 	
 	private ArrayList<Contactos>contacto=new ArrayList<>();
 	
+	/**
+	 * 
+	 * @param nombre
+	 * @param telefono
+	 * @param edad
+	 */
 	public void añadirContacto(String nombre, String telefono, int edad) {
 		if(telefono.equals("0") || nombre.equals("0")) {
 			throw new IllegalArgumentException("telefono invalido");		
@@ -22,6 +28,9 @@ public class Agenda {
 		
 	}
 	
+	/**
+	 * @param nombre
+	 */
 	public void buscarContacto(String nombre) {
 		
 		boolean encontrado=false;
@@ -39,6 +48,9 @@ public class Agenda {
 		
 	}
 	
+	/**
+	 * Metodo para la carga de contacto usando el arraylist 
+	 */
 	public void cargarContactos() {
 		contacto.add(new Contactos("Juan", "123456789", 25));
         contacto.add(new Contactos("Ana", "987654321", 30));
