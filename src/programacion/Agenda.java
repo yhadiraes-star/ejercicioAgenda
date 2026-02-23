@@ -7,8 +7,12 @@ import java.util.ArrayList;
  */
 public class Agenda {
 	
+	
 	private ArrayList<Contactos>contacto=new ArrayList<>();
 	
+	public Agenda() {
+		cargarContacto();
+	}
 	/**
 	 * 
 	 * @param nombre
@@ -39,6 +43,8 @@ public class Agenda {
 				System.out.println("Contacto encontrado: " + contacto);
 				encontrado=true;
 				break; 
+			}else{
+				System.out.println("Contacto no encontrado. ");
 			}
 			
 			if(!encontrado) {
@@ -49,9 +55,9 @@ public class Agenda {
 	}
 	
 	/**
-	 * Metodo para la carga de contacto usando el arraylist 
+	 * Se carga 10 contactos iniciales
 	 */
-	public void cargarContactos() {
+	public void cargarContacto() {
 		contacto.add(new Contactos("Juan", "123456789", 25));
         contacto.add(new Contactos("Ana", "987654321", 30));
         contacto.add(new Contactos("Luis", "111222333", 28));
@@ -62,8 +68,18 @@ public class Agenda {
         contacto.add(new Contactos("Sofia", "888999000", 24));
         contacto.add(new Contactos("Andres", "333444555", 29));
         contacto.add(new Contactos("Lucia", "666777888", 26));
-		System.out.println(contacto.toString());
-		return;
+		
+	}
+
+	public void mostrarContacto() {
+		for(Contactos c: contacto) {
+			System.out.println(c);
+		}
+	}
+	
+	
+	public void borrarContacto() {
+		
 	}
 	
 	

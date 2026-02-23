@@ -51,7 +51,7 @@ public class Aplicacion {
 					case 3:
 						break;
 					case 4:
-						agenda1.cargarContactos();
+						agenda1.mostrarContacto();
 						
 						break;
 					case 5:
@@ -61,7 +61,7 @@ public class Aplicacion {
 						
 				}
 				
-			}while(opcion!=4);
+			}while(opcion!=6);
 			teclado.close();
 		}
 	
